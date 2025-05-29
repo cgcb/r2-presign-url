@@ -1,0 +1,146 @@
+# Node.js dependencies
+/node_modules/
+jspm_packages/
+bower_components/
+build/Release/
+
+# Wrangler build output & caches
+.wrangler/
+.dev.vars
+r2-presign-url.code-workspace
+
+# Project build folders
+/worker.js
+/dist/
+/build/
+/.esbuild/
+/cache/
+/.parcel-cache/
+/.cache/
+/.next/
+/out/
+/.nuxt/
+/.cache/
+/.temp
+.vuepress/dist
+.docusaurus
+.serverless/
+/fusebox/
+/rpt2_cache/
+/rts2_cache_cjs/
+/rts2_cache_es/
+/rts2_cache_umd/
+
+# Lockfiles (optional)
+#/package-lock.json
+#/yarn.lock
+#/pnpm-lock.yaml
+
+# Env files
+.env
+.env.*
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+.node_repl_history
+
+# Coverage & test output
+coverage/
+*.lcov
+.nyc_output/
+
+# JS coverage
+lib-cov/
+
+# Grunt intermediate storage
+.grunt/
+
+# Snowpack / web modules
+web_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# ESLint / Stylelint caches
+.eslintcache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Yarn v2+ directories
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Parcel cache
+.cache
+.parcel-cache
+
+# Next.js, Gatsby, Nuxt, VuePress, Docusaurus, etc.
+.next
+out
+.cache/
+.nuxt
+.temp
+.vuepress/dist
+.docusaurus
+
+# Serverless / DynamoDB Local
+.serverless/
+.dynamodb/
+
+# FuseBox cache
+.fusebox/
+
+# TernJS port file
+.tern-port
+
+# VSCode extensions testing
+.vscode-test
+
+# Other IDE/editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.editorconfig

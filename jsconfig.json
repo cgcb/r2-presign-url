@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"target": "es2021",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"checkJs": false,
+		"allowJs": true,
+		"jsx": "react-jsx",
+		"baseUrl": ".",
+		"paths": {
+			"*": ["src/*"]
+		}
+	},
+	"include": ["src", "worker-configuration.d.ts"]
+}

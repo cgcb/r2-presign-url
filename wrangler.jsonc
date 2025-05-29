@@ -1,0 +1,75 @@
+/**
+* wrangler.template.jsonc - Fill in placeholders before use.
+* This is a template for your wrangler.jsonc configuration.
+* Replace placeholder values (e.g., YOUR_...) with your actual settings.
+*
+* To use, rename this file to wrangler.jsonc (or similar) and populate the values.
+* Example publish commands:
+* npx wrangler publish --env dev
+* npx wrangler publish --env prod
+*/
+
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "r2-presign-url",
+	"main": "src/index.js",
+	"compatibility_date": "2025-05-25",
+	"observability": {
+		"enabled": true
+	},
+
+	"env": {
+		"dev": {
+			"vars": {
+				"R2_PUBLIC_URL_PREFIX": "https://pub-YOUR_DEV_R2_PUBLIC_URL_HASH.r2.dev",
+				"EXPECTED_AUDIENCE": "your-jwt-expected-audience",
+				"EXPECTED_ISSUER": "your-jwt-expected-issuer",
+				"MAX_FILES": "200",
+				"PRESIGNED_URL_EXPIRATION_SECONDS": "300",
+				"DEPLOY_ENV": "dev",
+				"R2_BUCKET_NAME": "your-primary-r2-bucket-logical-name-dev",
+				"DEFAULT_MAX_FILES": "200",
+				"DEFAULT_PRESIGNED_URL_EXPIRY_SECONDS": "300",
+				"MIN_PRESIGNED_URL_EXPIRATION_SECONDS": "60",
+				"MAX_PRESIGNED_URL_EXPIRATION_SECONDS": "3600",
+				"MAX_PAYLOAD_SIZE_BYTES": "524288",
+				"PRESIGN_OPERATION_TIMEOUT_MS": "5000",
+				"PRESIGN_REQUEST_CONCURRENCY_LIMIT": "10",
+				"DEBUG_LOGGING": "true"
+			},
+			"r2_buckets": [
+				{
+					"binding": "YOUR_R2_BUCKET_BINDING",
+					"bucket_name": "your-actual-r2-bucket-name-for-dev",
+					"preview_bucket_name": "your-actual-r2-preview-bucket-name-for-dev"
+				}
+			]
+		},
+		"prod": {
+			"vars": {
+				"R2_PUBLIC_URL_PREFIX": "https://your-production-r2-public-url-prefix.example.com",
+				"EXPECTED_AUDIENCE": "your-jwt-expected-audience",
+				"EXPECTED_ISSUER": "your-jwt-expected-issuer",
+				"MAX_FILES": "200",
+				"PRESIGNED_URL_EXPIRATION_SECONDS": "300",
+				"DEPLOY_ENV": "prod",
+				"R2_BUCKET_NAME": "your-primary-r2-bucket-logical-name-prod",
+				"DEFAULT_MAX_FILES": "200",
+				"DEFAULT_PRESIGNED_URL_EXPIRY_SECONDS": "300",
+				"MIN_PRESIGNED_URL_EXPIRATION_SECONDS": "60",
+				"MAX_PRESIGNED_URL_EXPIRATION_SECONDS": "3600",
+				"MAX_PAYLOAD_SIZE_BYTES": "524288",
+				"PRESIGN_OPERATION_TIMEOUT_MS": "5000",
+				"PRESIGN_REQUEST_CONCURRENCY_LIMIT": "10",
+				"DEBUG_LOGGING": "false"
+			},
+			"r2_buckets": [
+				{
+					"binding": "YOUR_R2_BUCKET_BINDING",
+					"bucket_name": "your-actual-r2-bucket-name-for-prod",
+					"preview_bucket_name": "your-actual-r2-preview-bucket-name-for-prod"
+				}
+			]
+		}
+	}
+}
